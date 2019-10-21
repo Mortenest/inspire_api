@@ -27,7 +27,7 @@ final class PhotoUrlDBModel: Codable{
 
 extension PhotoUrlDBModel: Model {
     static var idKey: WritableKeyPath<PhotoUrlDBModel, String?> {
-        return \Self.id
+        return \PhotoUrlDBModel.id
     }
     
     typealias ID = String

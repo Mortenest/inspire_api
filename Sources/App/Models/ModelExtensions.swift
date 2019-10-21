@@ -12,7 +12,7 @@ extension Fluent.Model {
         if type(of: self) == PhotoUrlDBModel.self{
                           
                   }
-        guard let id = self[keyPath: \.fluentID] else { return self.create(on: conn)}
+        guard let id = self[keyPath: \Self.fluentID] else { return self.create(on: conn)}
         let existingModel = Self.find(id, on: conn)
         return existingModel.flatMap({ (model) -> EventLoopFuture<Self> in
 
